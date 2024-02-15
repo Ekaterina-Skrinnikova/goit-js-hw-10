@@ -1,0 +1,84 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.feedback-form {
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  /* height: 296px; */
+
+  /* outline: 1px solid tomato; */
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+label:not(:first-child) {
+  margin-top: 8px;
+}
+
+.feedback-form input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border-color: #000;
+  outline-color: transparent;
+  outline-offset: 4px;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  outline-color: transparent;
+  outline-offset: 4px;
+}
+
+.feedback-form textarea {
+  resize: none;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 80px;
+}
+
+button {
+  margin-top: 16px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  background-color: #4e75ff;
+}
+
+button:hover,
+button:focus {
+  background-color: #6c8cff;
+  outline-color: transparent;
+  outline-offset: 4px;
+}
