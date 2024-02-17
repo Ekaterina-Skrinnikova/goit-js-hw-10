@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    
+    <title>Snackbar</title>
+    <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-3cfb730f.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-77e16229.js">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-7a007824.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/2-snackbar-faf2b2a8.css">
+  </head>
+  <body>
+    <section>
+      <a href="./index.html">Go to home</a>
+      <h1>Welcome to Snackbar</h1>
+    </section>
+
+    <form class="form">
+      <label class="form-label">
+        Delay (ms)
+        <div class="form-input">
+          <input type="number" name="delay" step="1000" required />
+          <div class="svg-input">
+            <svg class="step-up" width="16" height="16">
+              <use class="step-up-use" href="/goit-js-hw-10/assets/icons-95c065c9.svg#step-up"></use>
+            </svg>
+            <svg class="step-down" width="16" height="16">
+              <use
+                class="step-down-use"
+                href="/goit-js-hw-10/assets/icons-95c065c9.svg#step-down"
+              ></use>
+            </svg>
+          </div>
+        </div>
+      </label>
+
+      <fieldset class="radio-btn">
+        <legend>State</legend>
+        <div>
+          <label>
+            <input type="radio" name="state" value="fulfilled" required />
+            Fulfilled
+          </label>
+          <label>
+            <input type="radio" name="state" value="rejected" required />
+            Rejected
+          </label>
+        </div>
+      </fieldset>
+
+      <button type="submit">Create notification</button>
+    </form>
+    
+  </body>
+</html>
