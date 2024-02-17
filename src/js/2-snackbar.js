@@ -5,8 +5,6 @@ const radioBtn = document.querySelector('input[type="radio"]');
 const inputDelay = document.querySelector('input[name="delay"]');
 const formEl = document.querySelector('.form');
 const btnEl = document.querySelector('button');
-const stepUp = document.querySelector('.step-up');
-const stepDown = document.querySelector('.step-down');
 
 // реалізація дії при натисканні кнопки
 formEl.addEventListener('submit', e => {
