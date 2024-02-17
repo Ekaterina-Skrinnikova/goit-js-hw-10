@@ -18,14 +18,25 @@ body {
   row-gap: 8px;
 }
 
-.form-label input {
-  padding-left: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+.form-input {
+  position: relative;
+  width: 360px;
+  height: 40px;
+}
 
+.form-input:hover .svg-input {
+  visibility: visible;
+}
+
+.form-label input {
+  padding: 4px 10px;
   width: 360px;
   height: 40px;
 
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
   border: 1px solid #808080;
   border-radius: 4px;
 }
@@ -34,10 +45,41 @@ body {
   border-color: #000;
 }
 
+.form-label input:hover + .step-up .step-down {
+  visibility: visible;
+}
+
 .form-label input:focus {
   border-color: #4e75ff;
   outline: transparent;
   outline-offset: 4px;
+}
+
+.form-label input:focus + .svg-input {
+  visibility: visible;
+}
+
+.svg-input {
+  visibility: hidden;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.step-up {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+}
+
+.step-down {
+  position: absolute;
+  top: 20px;
+  right: 10px;
 }
 
 .radio-btn {

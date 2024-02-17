@@ -5,7 +5,10 @@ const radioBtn = document.querySelector('input[type="radio"]');
 const inputDelay = document.querySelector('input[name="delay"]');
 const formEl = document.querySelector('.form');
 const btnEl = document.querySelector('button');
+const stepUp = document.querySelector('.step-up');
+const stepDown = document.querySelector('.step-down');
 
+// реалізація дії при натисканні кнопки
 formEl.addEventListener('submit', e => {
   e.preventDefault();
 
@@ -22,6 +25,7 @@ formEl.addEventListener('submit', e => {
         messageSize: '20',
         backgroundColor: '#59A10D',
         theme: 'light',
+        position: 'topRight',
         close: true,
         closeOnEscape: true,
         closeOnClick: true,
@@ -34,6 +38,7 @@ formEl.addEventListener('submit', e => {
         messageSize: '20',
         backgroundColor: '#EF4040',
         theme: 'light',
+        position: 'topRight',
         close: true,
         closeOnEscape: true,
         closeOnClick: true,
@@ -43,6 +48,7 @@ formEl.addEventListener('submit', e => {
   formEl.reset();
 });
 
+// створення проміса
 function createPromise(valueBtn, delay) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -53,3 +59,26 @@ function createPromise(valueBtn, delay) {
     }, delay);
   });
 }
+
+// кнопки для input[type="number"]
+formEl.addEventListener('click', e => {
+  if (
+    e.target.classList.value === 'step-up' ||
+    e.target.classList.value === 'step-up-use'
+  ) {
+    inputDelay.stepUp();
+    stepUp.classList.add('active');
+    stepDown.classList.remove('active');
+  }
+});
+
+formEl.addEventListener('click', e => {
+  if (
+    e.target.classList.value === 'step-down' ||
+    e.target.classList.value === 'step-down-use'
+  ) {
+    inputDelay.stepDown();
+    stepDown.classList.add('active');
+    stepUp.classList.remove('active');
+  }
+});

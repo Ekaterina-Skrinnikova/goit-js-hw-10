@@ -10,18 +10,31 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/2-snackbar.css" />
-    <title>Form</title>
+    <title>Snackbar</title>
   </head>
   <body>
     <section>
       <a href="./index.html">Go to home</a>
-      <h1>Welcome to Form</h1>
+      <h1>Welcome to Snackbar</h1>
     </section>
 
     <form class="form">
       <label class="form-label">
         Delay (ms)
-        <input type="number" name="delay" required />
+        <div class="form-input">
+          <input type="number" name="delay" step="1000" required />
+          <div class="svg-input">
+            <svg class="step-up" width="16" height="16">
+              <use class="step-up-use" href="./images/icons.svg#step-up"></use>
+            </svg>
+            <svg class="step-down" width="16" height="16">
+              <use
+                class="step-down-use"
+                href="./images/icons.svg#step-down"
+              ></use>
+            </svg>
+          </div>
+        </div>
       </label>
 
       <fieldset class="radio-btn">

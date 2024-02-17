@@ -52,13 +52,13 @@ function startDeltaDate(selectedDate) {
 
   if (selectedDate < currentDate) {
     startBtn.setAttribute('disabled', true);
-    return iziToast.show({
+    return iziToast.error({
       message: 'Please choose a date in the future',
-      messageColor: 'yellow',
+      messageColor: '',
       messageSize: '25',
-      backgroundColor: '',
+      backgroundColor: '#EF4040',
       balloon: true,
-      theme: 'dark',
+      theme: 'light',
       close: true,
       closeOnEscape: true,
       closeOnClick: true,
